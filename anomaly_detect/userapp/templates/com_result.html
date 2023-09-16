@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if obj %}
+
+<div class="container mt-3">
+  <h2>Summary</h2>
+  <p></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Final_data</th>
+        <th>Anomaly_data</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in obj %}
+      <tr>
+        <td>{{i.title}}</td>
+        <td><a target="_blank" href="{{i.final.url}}" >download </a></td>
+        <td><a href="{{i.outliers.url}}">download</a></td>
+        <td><a href="{% url 'detail' i.id %}"><button type="button" class="btn btn-info">View</button></a>
+</td>
+      </tr>
+
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
+
+
+
+{% endif %}
+
+{% endblock %}
+

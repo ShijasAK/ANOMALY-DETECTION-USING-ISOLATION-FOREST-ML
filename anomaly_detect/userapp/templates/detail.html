@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center" >
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+        <h3>Final_Data CSV</h3>
+        <div style="padding-left:180px">
+          <a href="{{obj.final.url}}" class="btn btn-primary">Download</a>
+          </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+        <h3>Anomaly_Data CSV</h3>
+        <div style="padding-left:180px">
+          <a href="{{obj.outliers.url}}" class="btn btn-primary" >Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br>
+<div class="container">
+    <div class="row mx_auto justify-content-center " >
+
+
+        <div class="my_bottom_margin col-9 col-sm-12 col-md-4  xol-lg-4">
+            <div class="card text-center" style="min-width:18rem;">
+                 <img class="card-img-top " src="{{obj.weekday_plot.url}}" alt="weekday" height="250">
+                <div class="card-body">
+
+                    <h4>graph</h4>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="my_bottom_margin col-9 col-sm-12 col-md-4  xol-lg-4">
+            <div class="card text-center" style="min-width:18rem;">
+                 <img class="card-img-top " src="{{obj.hist_img.url}}" alt="hist" height="250">
+                <div class="card-body">
+
+                    <h4>Histograph</h4>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
