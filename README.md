@@ -1,2 +1,2 @@
 # ANOMALY-DETECTION-USING-ISOLATION-FOREST-ML
-team project 
+Academic project 
